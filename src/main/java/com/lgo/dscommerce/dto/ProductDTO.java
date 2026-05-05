@@ -20,6 +20,7 @@ public class ProductDTO {
         this.imgUrl = imgUrl;
     }
 
+    // não é ideal para entidades com muitos atributos
     public ProductDTO(Product entity){
         id = entity.getId();
         name = entity.getName();
@@ -27,9 +28,6 @@ public class ProductDTO {
         price = entity.getPrice();
         imgUrl = entity.getImgUrl();
     }
-
-    // Não precisa colocar set em DTO uma vez que não há necessidade de alterar os dados
-
 
     public Long getId() {
         return id;
